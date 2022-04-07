@@ -23,7 +23,7 @@ public class Main {
         double [] results;
         Scanner scanner;
         String option = "";
-        while (option != "exit") {
+        while (!option.equals("exit")) {
             scanner = new Scanner(System.in);
             System.out.println("Type help for command list");
             System.out.println("Enter command: ");
@@ -39,8 +39,14 @@ public class Main {
                                 .toArray();
 
                     case "console":
-                        scanner = new Scanner(System.in);
-                        String numbers="";
+                        Scanner a = new Scanner(System.in);
+                        Scanner b=new Scanner(System.in);
+                        System.out.println("First number: ");
+                        double first=a.nextDouble();
+                        System.out.println("Second number: ");
+                        double second=b.nextDouble();
+                        System.out.println("Your numbers are: "+first+" "+second);
+
 
                 }
             } catch (Exception ex) {
